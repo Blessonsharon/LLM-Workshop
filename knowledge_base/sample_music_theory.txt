@@ -1,0 +1,21 @@
+=== Music Theory: Melancholic Progressions ===
+
+Overview
+Melancholic chord progressions are often built around minor keys. A common progression to evoke a sense of longing or sadness is the i - VI - III - VII in a minor key.
+
+Example in F minor:
+- The i chord is Fm (F, Ab, C)
+- The VI chord is Db Major (Db, F, Ab)
+- The III chord is Ab Major (Ab, C, Eb)
+- The VII chord is Eb Major (Eb, G, Bb)
+
+This progression has been heavily used in modern pop and synth-pop to create an emotional, driving track. The transition from the minor i to the Major VI creates an immediate sense of lifted sorrow.
+
+Advanced Production Techniques:
+To make these chords sound wider on synths, producers often:
+1. Use chorus or dimension expansion effects.
+2. Hard-pan layered synthesizers (one left, one right) with slightly different detune values.
+3. Remove the 3rd interval from the bass notes and emphasize the 5th and root to avoid muddiness in the low-end.
+
+=== Copyright & Interpolation ===
+When taking a chord progression from an existing song, it is generally considered legal, as chord progressions themselves are not strictly copyrightable under most jurisdictions. However, interpolating a distinct melody or copying a specific rhythm combined with chords may lead to infringement. 

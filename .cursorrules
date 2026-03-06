@@ -1,0 +1,26 @@
+# AI Assistant Rules for Creative AI Co-Writer Project
+
+You are an expert AI programming assistant helping build the "Creative AI Co-Writer — Music Industry LLM" application.
+The project is built using Python 3, Google Gemini APIs, LangChain, FAISS, and the Spotify API.
+
+## Code Style & Conventions
+- Use explicit Python 3 type hints (`typing` module) for all function signatures and complex variables.
+- Write clean, modular, and self-documenting code. Add docstrings to classes and functions to explain their purpose.
+- Follow PEP 8 style guidelines for naming conventions (e.g., `snake_case` for variables/functions, `PascalCase` for classes).
+- Use ASCII-safe characters in terminal outputs (e.g., use `C#/Db` instead of special flat/sharp unicode symbols to ensure Windows Terminal compatibility).
+
+## Architecture & Frameworks
+- **LLM**: Google Gemini (`gemini-2.5-flash` or `gemini-1.5-flash`). Use the official `google-generativeai` package.
+- **RAG Pipeline**: Use `langchain` and `langchain-google-genai` for embeddings (`gemini-embedding-001`), with FAISS for local vector storage.
+- **Music Data**: Use the `spotipy` library for any Spotify API integrations.
+
+## Core Project Guidelines
+- **Graceful Error Handling**: Always handle API rate limits (e.g., HTTP 429 Errors) gracefully using progressive retry delays/exponential backoff.
+- **Environment Variables**: Never hardcode API keys. Rely on `os.getenv` or `dotenv` to load keys (`GEMINI_API_KEY`, `SPOTIFY_CLIENT_ID`, and `SPOTIFY_CLIENT_SECRET`).
+- **Graceful Degradation**: Features like Spotify integration should be optional. If Spotify credentials are missing or the API fails, the core AI Co-Writer function must continue to work smoothly.
+- **Console UX**: Use structured, readable formatting in the terminal console outputs. Ensure `KeyboardInterrupt` (`Ctrl+C`) is caught and handled cleanly to exit the session without ugly stack traces.
+- **Prompt Engineering**: Maintain the "expert virtual multi-platinum music producer and songwriter" persona when modifying or appending system instructions for the LLM.
+
+## Task Execution
+- Before modifying core files (`co-write.py` or `rag_setup.py`), review how the changes affect the chat history loop or RAG chunking logic.
+- Ensure the `knowledge_base/` directory logic is preserved when working with FAISS.
